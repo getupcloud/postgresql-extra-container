@@ -12,4 +12,3 @@ RUN yum install -y epel-release && \
     yum clean all
 
 USER 26
-

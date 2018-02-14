@@ -1,4 +1,4 @@
-FROM centos/postgresql-94-centos7:latest
+FROM centos/postgresql-95-centos7:latest
 
 USER root
 
@@ -12,4 +12,3 @@ RUN yum install -y epel-release && \
     yum clean all
 
 USER 26
-
