@@ -3,7 +3,7 @@ FROM centos/postgresql-95-centos7:latest
 USER root
 
 RUN yum install -y epel-release && \
-    DEVEL_PACKAGES="gcc-c++ make libxml2-devel rh-postgresql94-postgresql-devel geos-devel proj-devel gdal-devel" &&
+    DEVEL_PACKAGES="gcc-c++ make libxml2-devel rh-postgresql94-postgresql-devel geos-devel proj-devel gdal-devel" && \
     yum install -y $DEVEL_PACKAGES && \
     curl -sL http://download.osgeo.org/postgis/source/postgis-2.2.2.tar.gz | tar xzvf - -C /tmp && \
     scl enable rh-postgresql94 'cd /tmp/postgis-2.2.2 && ./configure && make && make install' && \
